@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  circuitpython:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VERSION: 8.2.9
+        BOARD: ${BOARD}
+    volumes:
+      - ./build:/root/build
+    # - ./shared-bindings/mymodule:/circuitpython/shared-bindings/mymodule
+    # - ./shared-module/mymodule:/circuitpython/shared-module/mymodule
+    environment:
+      DEBIAN_FRONTEND: noninteractive
