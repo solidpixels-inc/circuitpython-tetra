@@ -19,4 +19,4 @@ const mp_obj_module_t mymodule_module = {
 };
 
 // Register the module with the main runtime.
-MP_REGISTER_MODULE(MP_QSTR_mymodule, mymodule_module, MODULE_MYMODULE_ENABLED);
+MP_REGISTER_MODULE(MP_QSTR_mymodule, mymodule_module, MODULE_MYMODULE);

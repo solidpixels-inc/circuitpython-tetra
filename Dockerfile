@@ -27,6 +27,9 @@ RUN apt-get update && \
 RUN git clone https://github.com/adafruit/circuitpython.git . && \
     git checkout $VERSION
 
+# Copy the files for the external C modules configuration
+COPY py/*.mk py/
+
 RUN cd ports/espressif && make fetch-port-submodules
 
 # Install Python dependencies from requirements-dev.txt
